@@ -8,17 +8,6 @@ import (
 	"strconv"
 )
 
-type config interface {
-	ToInt() int
-	ToString() string
-	ToBool() bool
-	envRequire(key string) *Cfg
-}
-
-type Cfg struct {
-	key string
-}
-
 func Get(key string) *Cfg {
 	var cfg = &Cfg{}
 	return cfg.envRequire(key)
