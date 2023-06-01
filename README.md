@@ -9,7 +9,7 @@ The list of technologies will only grow in the future.
 The project supports:
 
 * Cookies (they are encrypted)
-* Middlewares (the structure of the middlewares supports expandability, and the middleware chain can be customized for specific needs. Currently, there are such middlewares as cookie verification, CORS substitution, Access verification (the id from the url is checked when going to another user's page, if the id matches the account of the user who is going, then he turns out to be on his page with full access, and if it is someone else's page, then read-only rights are set, with access to view user data and friends), and HTTP logging.)
+* Middlewares (the structure of the middlewares supports expandability, and the middleware chain can be customized for specific needs. Currently, there are such middlewares as cookie verification, Access verification (the id from the url is checked when going to another user's page, if the id matches the account of the user who is going, then he turns out to be on his page with full access, and if it is someone else's page, then read-only rights are set, with access to view user data and friends), and HTTP logging.)
 * Registration (passwords are encrypted) url (/register)
 * Authorization (/auth)
 * Logout (/logout)
