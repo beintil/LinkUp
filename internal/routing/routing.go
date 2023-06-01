@@ -32,4 +32,5 @@ func routing(r *routers) {
 	r.friends()
 	r.search()
 	r.user()
+	r.visit()
 }

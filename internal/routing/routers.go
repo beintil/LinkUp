@@ -40,6 +40,12 @@ func (r *routers) search() {
 }
 
 func (r *routers) user() {
-	r.eng.GET(cs.Home, home.FormHandler)
-	r.eng.Use(r.mw.HandlerVisitors()).GET(cs.HomeWithId, home.FormHandler)
+	r.eng.GET(cs.Home, home.Home)
+}
+
+func (r *routers) visit() {
+	r.eng.Use(r.mw.HandlerVisitors())
+	r.eng.GET(cs.HomeWithId, home.Visit)
+	r.eng.GET(cs.ProfileWithId, profile.GetVisit)
+	r.eng.GET(cs.GetFriendsWithId, friends.GetVisit)
 }
