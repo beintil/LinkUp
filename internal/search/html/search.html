@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LinkUp</title>
+    <style>
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input[type="text"] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid gray;
+            border-radius: 4px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .user-container {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        .error-message {
+            color: red;
+            margin-top: 20px;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="button-container">
+    <a href="/home"><button>Home</button></a>
+</div>
+
+<div class="search-container">
+    <form action="/search" method="POST">
+        <label for="data">Search:</label>
+        <input type="text" id="data" name="data">
+        <button type="submit">Search</button>
+    </form>
+</div>
+{{if .}}
+<div class="results-container">
+    {{range .}}
+    <div class="user-container">
+        <a href="/home/{{.LocalId}}" class="avatar">{{.Login}}</a>
+        <div>
+            <div>Login: {{.Login}}</div>
+            <div>First name: {{.FirstName}}</div>
+            <div>Last name: {{.LastName}}</div>
+            <div>Local ID: {{.LocalId}}</div>
+            <form action="/friends/add" method="POST">
+                <input type="hidden" name="id" value="{{.LocalId}}">
+                <button type="submit" {{if .IsFriends}}disabled{{end}} style="{{if .IsFriends}}background-color: gray;{{end}}">
+                    {{if .IsFriends}}
+                    Already in your friends
+                    {{else}}
+                    <span>Add to Friends</span>
+                    {{end}}
+                </button>
+            </form>
+        </div>
+    </div>
+    {{end}}
+</div>
+{{else}}
+<div class="error-message">Sorry, an error occurred while searching for users.</div>
+{{end}}
+</body>
+</html>
