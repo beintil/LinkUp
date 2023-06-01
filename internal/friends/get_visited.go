@@ -1,7 +1,6 @@
 package friends
 
 import (
-	mycookies "LinkUp_Update/internal/cookie"
 	"LinkUp_Update/internal/database"
 	"LinkUp_Update/internal/friends/service"
 	"LinkUp_Update/var/logs"
@@ -10,7 +9,7 @@ import (
 	"time"
 )
 
-func Get(c *gin.Context) {
+func GetVisit(c *gin.Context) {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 	db := database.Init(ctx).GetConn()
@@ -20,5 +19,5 @@ func Get(c *gin.Context) {
 			logs.Get().LogApi(rec)
 		}
 	}()
-	service.GetService(db, c).Get("SELECT friends_id FROM users WHERE id = $1", mycookies.DecodeIdFromCookie(c))
+	service.GetService(db, c).Get("SELECT friends_id FROM users WHERE local_id = $1", c.Param("id"))
 }

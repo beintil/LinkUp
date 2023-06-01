@@ -15,7 +15,7 @@ func GetService(db *sqlx.DB, c *gin.Context) *Service {
 }
 
 type friends interface {
-	Get()
+	Get(sql string, id string)
 	Delete()
 	Add()
 }

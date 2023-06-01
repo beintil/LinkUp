@@ -1,18 +1,15 @@
 package service
 
 import (
-	mycookies "LinkUp_Update/internal/cookie"
 	"github.com/jmoiron/sqlx"
-	"html/template"
-	"net/http"
 	"strings"
 )
 
-func (s *Service) Get() {
+func (s *Service) Get(sql string, id string) {
 	var myFriends []string
 	var err error
 
-	myFriends, err = s.getFriendsIdFromDb("SELECT friends_id FROM users WHERE id = $1", mycookies.DecodeIdFromCookie(s.c))
+	myFriends, err = s.getFriendsIdFromDb(sql, id)
 
 	if err != nil {
 		s.l.LogApi(err)
@@ -68,36 +65,4 @@ func (s *Service) getFriendsIdFromDb(sql string, id string) ([]string, error) {
 		}
 	}
 	return myFriends, nil
-}
-
-func (s *Service) friendsFormHandler(usersData *[]users) {
-	tmpl, err := template.ParseFiles("./internal/friends/html/friends.html")
-	if err != nil {
-		s.l.LogApi(err)
-		s.c.Status(http.StatusInternalServerError)
-		return
-	}
-	type userData struct {
-		UsersData []users
-		ID        string
-	}
-
-	if usersData != nil {
-		err = tmpl.Execute(s.c.Writer, userData{
-			UsersData: *usersData,
-			ID:        s.c.Param("id"),
-		})
-		if err != nil {
-			s.l.LogApi(err)
-			s.c.Status(http.StatusInternalServerError)
-		}
-	} else {
-		err = tmpl.Execute(s.c.Writer, userData{
-			ID: s.c.Param("id"),
-		})
-		if err != nil {
-			s.l.LogApi(err)
-			s.c.Status(http.StatusInternalServerError)
-		}
-	}
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Friends</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .user-container {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+<body>
+<div class="header-container">
+  <h1>Your Friends</h1>
+  <div class="button-container">
+    <a href="/home/{{.ID}}"><button>Home</button></a>
+  </div>
+</div>
+<div class="container">
+  {{if .UsersData}}
+  {{range .UsersData}}
+  <div class="user-container">
+    <a href="/home/{{.LocalId}}" class="avatar">{{.Login}}</a>
+    <div>
+      <div>Login: {{.Login}}</div>
+      <div>First name: {{.FirstName}}</div>
+      <div>Last name: {{.LastName}}</div>
+      <div>Local ID: {{.LocalId}}</div>
+    </div>
+  </div>
+  {{end}}
+  {{else}}
+  <div>Sorry, there are no friends to display.</div>
+  {{end}}
+  <script>
+    function redirectToAuthPage() {
+      window.location.replace("/friends");
+    }
+  </script>
+
+</div>
+</body>
+</html>
