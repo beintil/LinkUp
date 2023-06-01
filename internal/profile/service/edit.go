@@ -5,7 +5,6 @@ import (
 	mycookies "LinkUp_Update/internal/cookie"
 	"net/http"
 	"strconv"
-	"time"
 )
 
 func (s *Service) Edit() {
@@ -65,6 +64,15 @@ func serviceAge(str string) (int, error) {
 }
 
 func (s *Service) updateUser(user editUserData) error {
+	_, err := s.db.NamedExec(s.collectorSqlAndParams(user))
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (s *Service) collectorSqlAndParams(user editUserData) (string, map[string]interface{}) {
 	sql := `UPDATE users SET `
 	sqlParams := make(map[string]interface{})
 
@@ -105,35 +113,5 @@ func (s *Service) updateUser(user editUserData) error {
 
 	// Add the id parameter to the sqlParams map
 	sqlParams["id"] = user.ID
-
-	_, err := s.db.NamedExec(sql, sqlParams)
-	if err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func (s *Service) getUserFromDB(sql string, user *getUserData, id string) error {
-	row := s.db.QueryRow(sql, id)
-	if row.Err() != nil {
-		return row.Err()
-	}
-	var get getFromDb
-	if err := row.Scan(&user.Email, &user.Login, &get.AgeDB, &get.FirstNameDB, &get.LastNameDB, &get.GenderDB, &get.DateOfBirthDB); err != nil {
-		return err
-	}
-	if get.DateOfBirthDB.String != "" {
-		t, err := time.Parse("2006-01-02T15:04:05Z", get.DateOfBirthDB.String)
-		if err != nil {
-			return err
-		}
-		user.DateOfBirth = t.Format("2006-01-02")
-	}
-
-	user.Age = get.AgeDB.Int64
-	user.FirstName = get.FirstNameDB.String
-	user.LastName = get.LastNameDB.String
-	user.Gender = get.GenderDB.String
-	return nil
+	return sql, sqlParams
 }
