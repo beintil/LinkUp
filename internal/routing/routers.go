@@ -16,37 +16,30 @@ import (
 type routers struct {
 	eng *gin.Engine
 	l   *logs.Logging
+	mw  *middleware.Middleware
 }
 
 func (r *routers) identification() {
-	r.eng.RouterGroup.Match([]string{http.MethodPost, http.MethodGet}, cs.Conversion(cs.Registration), identification.Registration)
-	r.eng.RouterGroup.Match([]string{http.MethodPost, http.MethodGet}, cs.Conversion(cs.Authorization), identification.Authorization)
-	r.eng.RouterGroup.Match([]string{http.MethodPost, http.MethodGet}, cs.Conversion(cs.Logout), identification.Logout)
+	r.eng.RouterGroup.Match([]string{http.MethodPost, http.MethodGet}, cs.Registration, identification.Registration)
+	r.eng.RouterGroup.Match([]string{http.MethodPost, http.MethodGet}, cs.Authorization, identification.Authorization)
+	r.eng.RouterGroup.Match([]string{http.MethodPost, http.MethodGet}, cs.Logout, identification.Logout)
 }
 
 func (r *routers) profile() {
-	var mw = middleware.Middleware{}
-	g := r.eng.Use(mw.CheckCookieAndRedirect())
-	g.GET(cs.Conversion(cs.Profile), profile.Get)
-	g.POST(cs.Conversion(cs.Profile), profile.Edit)
+	r.eng.GET(cs.Profile, profile.Get).POST(cs.Profile, profile.Edit)
 }
 
 func (r *routers) friends() {
-	var mw = middleware.Middleware{}
-	g := r.eng.Use(mw.CheckCookieAndRedirect())
-	g.GET(cs.Conversion(cs.GetFriends), friends.Get)
-	g.POST(cs.Conversion(cs.DeleteFriends), friends.Delete)
-	g.POST(cs.Conversion(cs.AddFriends), friends.Add)
+	r.eng.GET(cs.GetFriends, friends.Get)
+	r.eng.POST(cs.DeleteFriends, friends.Delete)
+	r.eng.POST(cs.AddFriends, friends.Add)
 }
 
 func (r *routers) search() {
-	var mw = middleware.Middleware{}
-	g := r.eng.Use(mw.CheckCookieAndRedirect())
-	g.Match([]string{http.MethodPost, http.MethodGet}, cs.Conversion(cs.SearchUser), search.Search)
+	r.eng.Match([]string{http.MethodPost, http.MethodGet}, cs.SearchUser, search.Search)
 }
 
 func (r *routers) user() {
-	var mw = middleware.Middleware{}
-
-	r.eng.Use(mw.CheckCookieAndRedirect()).GET(cs.Conversion(cs.Home), home.FormHandler)
+	r.eng.GET(cs.Home, home.FormHandler)
+	r.eng.Use(r.mw.HandlerVisitors()).GET(cs.HomeWithId, home.FormHandler)
 }

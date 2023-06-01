@@ -383,3 +383,13 @@ Line: 13
 File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
 Line: 19
 
+
+2023-06-01 12:10:55: Cannot redirect with status code 400
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/routing/middleware/middleware.go
+Line: 29
+
+
+2023-06-01 12:30:23: runtime error: slice bounds out of range [:25] with length 15
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/routing/middleware/middleware.go
+Line: 29
+

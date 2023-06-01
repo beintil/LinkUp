@@ -11,6 +11,7 @@ import (
 func (s *Service) Edit() {
 	user, err := s.parseEditData()
 	if err != nil {
+		s.l.LogApi(err)
 		s.c.Status(http.StatusInternalServerError)
 		return
 	}
@@ -20,7 +21,7 @@ func (s *Service) Edit() {
 		s.c.Status(http.StatusInternalServerError)
 		return
 	}
-	s.c.Redirect(http.StatusFound, cs.Conversion(cs.Profile))
+	s.c.Redirect(http.StatusFound, cs.Profile)
 }
 
 func (s *Service) parseEditData() (editUserData, error) {
@@ -28,6 +29,7 @@ func (s *Service) parseEditData() (editUserData, error) {
 	err := r.ParseForm()
 	if err != nil {
 		s.l.LogApi(err)
+		s.c.Status(http.StatusInternalServerError)
 		return editUserData{}, err
 	}
 

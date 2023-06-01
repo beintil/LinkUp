@@ -22,5 +22,5 @@ func Delete(c *gin.Context) {
 		}
 	}()
 	service.GetService(db, c).Delete()
-	c.Redirect(http.StatusSeeOther, cs.Conversion(cs.GetFriends))
+	c.Redirect(http.StatusSeeOther, cs.GetFriends)
 }

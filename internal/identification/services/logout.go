@@ -8,5 +8,5 @@ import (
 
 func (s *Service) Logout() {
 	mycookies.Delete(s.c)
-	s.c.Redirect(http.StatusSeeOther, cs.Conversion(cs.Authorization))
+	s.c.Redirect(http.StatusSeeOther, cs.Authorization)
 }

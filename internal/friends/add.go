@@ -22,5 +22,5 @@ func Add(c *gin.Context) {
 		}
 	}()
 	service.GetService(db, c).Add()
-	c.Redirect(http.StatusSeeOther, cs.Conversion(cs.GetFriends))
+	c.Redirect(http.StatusSeeOther, cs.GetFriends)
 }

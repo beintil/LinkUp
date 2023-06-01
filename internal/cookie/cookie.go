@@ -22,7 +22,7 @@ func DecodeIdFromCookie(c *gin.Context) string {
 	s := newService(c, config.Get(cookieName).ToString(), k1, k2)
 	id, err := s.decode()
 	if err != nil {
-		c.Redirect(http.StatusSeeOther, cs.Conversion(cs.Authorization))
+		c.Redirect(http.StatusSeeOther, cs.Authorization)
 		return id
 	}
 	return id
