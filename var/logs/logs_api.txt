@@ -1,0 +1,385 @@
+
+2023-05-27 11:08:14: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/user_service/register.go
+Line: 65
+
+
+2023-05-27 11:09:19: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/user_service/register.go
+Line: 65
+
+
+2023-05-27 11:10:25: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/user_service/register.go
+Line: 65
+
+
+2023-05-27 11:12:15: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/user_service/register.go
+Line: 65
+
+
+2023-05-28 11:40:10: cookies is nor deletes
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/logout.go
+Line: 13
+
+
+2023-05-28 11:40:51: open : The system cannot find the file specified.
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/form.go
+Line: 20
+
+
+2023-05-28 11:42:45: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/authorization.go
+Line: 55
+
+
+2023-05-28 11:46:23: cookies is not deletes
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/logout.go
+Line: 13
+
+
+2023-05-28 11:53:25: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/authorization.go
+Line: 59
+
+
+2023-05-28 17:42:57: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/error_handler.go
+Line: 16
+
+
+2023-05-28 17:42:57: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/error_handler.go
+Line: 16
+
+
+2023-05-28 17:47:18: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 118
+
+
+2023-05-28 17:48:08: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 99
+
+
+2023-05-28 17:48:08: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 69
+
+
+2023-05-28 17:48:31: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 99
+
+
+2023-05-28 17:48:31: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 69
+
+
+2023-05-28 17:49:23: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 100
+
+
+2023-05-28 17:49:23: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:54:47: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:55:22: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 100
+
+
+2023-05-28 17:55:22: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:55:39: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 113
+
+
+2023-05-28 17:55:39: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:56:04: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 113
+
+
+2023-05-28 17:56:04: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:56:05: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 113
+
+
+2023-05-28 17:56:05: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:56:09: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 113
+
+
+2023-05-28 17:56:09: cookies is not save
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 70
+
+
+2023-05-28 17:56:55: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 107
+
+
+2023-05-28 17:58:36: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 107
+
+
+2023-05-28 17:59:00: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 26
+
+
+2023-05-28 17:59:27: ppp
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/identification/register.go
+Line: 26
+
+
+2023-05-31 18:36:00: open ./internal/userInformation/html/myData.html: The system cannot find the path specified.
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/service/form.go
+Line: 10
+
+
+2023-05-31 18:39:45: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:40:40: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:44:31: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:44:38: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:45:11: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:48:43: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:51:08: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:53:12: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 18:56:55: invalid character 'e' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/profile/edit.go
+Line: 19
+
+
+2023-05-31 19:47:34: read ./internal/friends/html: Incorrect function.
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/friends/service/get_friends.go
+Line: 76
+
+
+2023-05-31 20:04:00: open ./internal/controllers/users/search/html/search.html: The system cannot find the path specified.
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/search.go
+Line: 100
+
+
+2023-05-31 20:10:06: cannot convert 409134815 to UUID
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/friends/add.go
+Line: 19
+
+
+2023-05-31 20:28:59: template: search.html:98: unexpected "!" in if
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:29:23: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:29:31: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:29:38: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:29:57: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:32:43: template: search.html:98:10: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:32:57: template: search.html:98: unexpected "!" in if
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:33:13: template: search.html:98: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:33:21: template: search.html:98: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:33:37: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:34:36: template: search.html:98:10: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:34:43: template: search.html:98:10: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:35:45: template: search.html:98: unexpected "!" in if
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:36:35: template: search.html:98: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:36:58: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:37:35: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:37:37: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:37:45: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:37:47: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:38:02: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:38:10: template: search.html:98: unexpected "=" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:38:26: template: search.html:98:10: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:39:21: template: search.html:98: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:40:17: template: search.html:74:5: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:40:22: template: search.html:74:5: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:40:25: template: search.html:74:5: executing "search.html" at <.User>: can't evaluate field User in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 25
+
+
+2023-05-31 20:40:38: template: search.html:74: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:40:48: template: search.html:74: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:40:57: template: search.html:74: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-05-31 20:41:01: template: search.html:74: unexpected "!" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp_Update/internal/search/service/form.go
+Line: 13
+
+
+2023-06-01 10:57:00: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+

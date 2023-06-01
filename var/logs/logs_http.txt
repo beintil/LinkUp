@@ -1,0 +1,53 @@
+
+METHOD: GET, URL: /register, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /register, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /auth, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /register, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /auth, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /register, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /auth, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: POST, URL: /auth/, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: POST, URL: /auth/, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /home, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /home, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /logout, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
+METHOD: GET, URL: /auth, ID_USER: 
+HOST: localhost:7878
+HTTP: HTTP/1.1
+USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.4.603 Yowser/2.5 Safari/537.36
