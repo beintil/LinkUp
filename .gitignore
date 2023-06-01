@@ -1,1 +1,3 @@
 .env
+./var/logs/logs_api.txt
+./var/logs/logs_http.txt
