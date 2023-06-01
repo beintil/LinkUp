@@ -40,7 +40,7 @@ Setting server
 * HTTP_HOST=127.0.0.1
 
 Start logging or not (Bool)
-* LOGGING=true
+* LOGGING_API=true
 
 Outputs http request and response data
 * LOGGING_HTTP=true
