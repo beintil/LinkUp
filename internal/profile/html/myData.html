@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+    }
+
+    form {
+      width: 400px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .home-button-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: blue;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .home-button {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="home-button-container">
+  <a class="home-button" href="/home">Home</a>
+</div>
+<h1>User Profile</h1>
+<form method="post" action="/home/profile">
+  <table>
+    <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email" value="{{.Email}}"></td>
+    </tr>
+    <tr>
+      <td>Login:</td>
+      <td><input type="text" name="login" value="{{.Login}}"></td>
+    </tr>
+    <tr>
+      <td>Age:</td>
+      <td><input type="number" name="age" value="{{.Age}}"></td>
+    </tr>
+    <tr>
+      <td>Firstname:</td>
+      <td><input type="text" name="firstName" value="{{.FirstName}}"></td>
+    </tr>
+    <tr>
+      <td>Lastname:</td>
+      <td><input type="text" name="lastName" value="{{.LastName}}"></td>
+    </tr>
+    <tr>
+      <td>Gender:</td>
+      <td>
+        <select name="gender" >
+          <option value="male" {{if eq .Gender "male"}}selected{{end}}>Male</option>
+          <option value="female" {{if eq .Gender "female"}}selected{{end}}>Female</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Date Of Birth:</td>
+      <td><input type="date" name="date_of_birth" value="{{.DateOfBirth}}"></td>
+    </tr>
+  </table>
+  <button type="button" onclick="toggleEditMode()">Edit</button>
+  <input type="submit" name="save" value="Save">
+</form>
+<script>
+  function toggleEditMode() {
+    var inputs = document.getElementsByTagName("input");
+    var selects = document.getElementsByTagName("select");
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].disabled = !inputs[i].disabled;
+    }
+    for (var i = 0; i < selects.length; i++) {
+      selects[i].disabled = !selects[i].disabled;
+    }
+  }
+</script>
+</body>
+</html>
