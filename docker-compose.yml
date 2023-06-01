@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "9797:9797"
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=beintil
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=newRestApi
+    depends_on:
+      - db
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=beintil
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=newRestApi
