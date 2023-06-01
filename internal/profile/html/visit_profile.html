@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile {{.LocalId}}</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+    }
+
+    form {
+      width: 400px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    .home-button-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: blue;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .home-button {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="home-button-container">
+  <a class="home-button" href="/home/{{.LocalId}}">Home</a>
+</div>
+<h1>User Profile</h1>
+<form method="post" action="/home/user">
+  <table>
+    <tr>
+      <td>Email:</td>
+      <td><input type="email" name="email" value="{{.Email}}" readonly></td>
+    </tr>
+    <tr>
+      <td>Login:</td>
+      <td><input type="text" name="login" value="{{.Login}}" readonly></td>
+    </tr>
+    <tr>
+      <td>Age:</td>
+      <td><input type="number" name="age" value="{{.Age}}" readonly></td>
+    </tr>
+    <tr>
+      <td>Firstname:</td>
+      <td><input type="text" name="firstName" value="{{.FirstName}}" readonly></td>
+    </tr>
+    <tr>
+      <td>Lastname:</td>
+      <td><input type="text" name="lastName" value="{{.LastName}}" readonly></td>
+    </tr>
+    <tr>
+      <td>Gender:</td>
+      <td>
+        <select name="gender" disabled class="disabled-select">
+          <option value="male" {{if eq .Gender "male"}}selected{{end}}>Male</option>
+          <option value="female" {{if eq .Gender "female"}}selected{{end}}>Female</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Date Of Birth:</td>
+      <td><input type="date" name="date_of_birth" value="{{.DateOfBirth}}" readonly></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -16,6 +16,7 @@ func GetService(db *sqlx.DB, c *gin.Context) *Service {
 
 type profile interface {
 	Get()
+	GetVisit()
 	Edit()
 }
 
