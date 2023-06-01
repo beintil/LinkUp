@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 350px;
+        }
+        form {
+            max-width: 340px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="email"],
+        input[type="text"],
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            text-align: center;
+            margin-top: 10px;
+            color: #ff0000;
+        }
+        .authorization {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Registration</h1>
+<div class="authorization" onclick="redirectToAuthPage()">Authorization</div>
+<form id="registration-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Submit">
+
+</form>
+<div id="result"></div>
+<script>
+    document.getElementById("registration-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/register/");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                window.location.replace("/home");
+            } else {
+                try {
+                    var error = JSON.parse(xhr.responseText);
+                    document.getElementById("result").innerHTML = "Registration failed. " + error.message;
+                } catch (e) {
+                    document.getElementById("result").innerHTML = "Registration failed. Please try again later.";
+                }
+            }
+        };
+        var data = {
+            "email": document.getElementById("email").value,
+            "login": document.getElementById("login").value,
+            "password": document.getElementById("password").value
+        };
+        xhr.send(JSON.stringify(data));
+    });
+    function redirectToAuthPage() {
+        window.location.replace("/auth/");
+    }
+</script>
+</body>
+</html>
