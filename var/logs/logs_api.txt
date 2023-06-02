@@ -408,3 +408,348 @@ Line: 10
 File: C:/Users/vadim/GolandProjects/LinkUp/internal/user/home/home_visited.go
 Line: 16
 
+
+2023-06-01 18:13:00: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:15:23: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:16:54: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:17:29: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:18:32: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:21:31: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:21:40: ОШИБКА: неверный синтаксис для типа integer: "delete" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+
+
+2023-06-01 18:47:08: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 18:49:42: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 18:53:20: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 18:54:00: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 18:58:13: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 18:58:34: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 18:59:15: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 19:02:32: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 19:09:57: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 19:10:41: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 19:11:39: ОШИБКА: ошибка синтаксиса (примерное положение: "WHERE") (SQLSTATE 42601)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/edit.go
+Line: 19
+
+
+2023-06-01 19:13:27: Cannot redirect with status code 200
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/edit.go
+Line: 19
+
+
+2023-06-01 19:39:16: template: profile.html:122:38: executing "profile.html" at <.EditMode>: can't evaluate field EditMode in type *service.getUserData
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/form.go
+Line: 16
+
+
+2023-06-01 19:40:40: template: profile.html:122:38: executing "profile.html" at <.EditMode>: can't evaluate field EditMode in type *service.getUserData
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/form.go
+Line: 16
+
+
+2023-06-01 19:42:40: template: profile.html:122:39: executing "profile.html" at <.EditMode>: can't evaluate field EditMode in type *service.getUserData
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/form.go
+Line: 16
+
+
+2023-06-01 19:46:28: template: profile.html:122:39: executing "profile.html" at <.EditMode>: can't evaluate field EditMode in type *service.getUserData
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/form.go
+Line: 16
+
+
+2023-06-01 19:47:42: template: profile.html:122:39: executing "profile.html" at <.EditMode>: can't evaluate field EditMode in type *service.getUserData
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/profile/service/form.go
+Line: 16
+
+
+2023-06-01 20:31:07: write tcp 127.0.0.1:7878->127.0.0.1:52095: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 20:32:11: write tcp 127.0.0.1:7878->127.0.0.1:62210: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 20:34:11: write tcp 127.0.0.1:7878->127.0.0.1:52604: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 20:35:31: write tcp 127.0.0.1:7878->127.0.0.1:52620: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:07:19: write tcp 127.0.0.1:7878->127.0.0.1:62544: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:08:39: write tcp 127.0.0.1:7878->127.0.0.1:62564: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:10:18: write tcp 127.0.0.1:7878->127.0.0.1:62591: i/o timeout
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:21:08: invalid character 'd' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/search.go
+Line: 14
+
+
+2023-06-01 21:21:15: invalid character 'd' looking for beginning of value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/search.go
+Line: 14
+
+
+2023-06-01 21:36:05: template: search.html:84:5: executing "search.html" at <.Results>: can't evaluate field Results in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:36:08: template: search.html:84:5: executing "search.html" at <.Results>: can't evaluate field Results in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:36:10: template: search.html:84:5: executing "search.html" at <.Results>: can't evaluate field Results in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:36:12: template: search.html:84:5: executing "search.html" at <.Results>: can't evaluate field Results in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:36:15: template: search.html:84:5: executing "search.html" at <.Results>: can't evaluate field Results in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:38:22: template: search.html:109:5: executing "search.html" at <.ErrorMessage>: can't evaluate field ErrorMessage in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:38:25: template: search.html:109:5: executing "search.html" at <.ErrorMessage>: can't evaluate field ErrorMessage in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:38:31: template: search.html:109:5: executing "search.html" at <.ErrorMessage>: can't evaluate field ErrorMessage in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:39:44: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:39:50: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:39:52: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:39:55: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:39:58: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:40:22: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:40:24: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:41:42: template: search.html:109:5: executing "search.html" at <.Error>: can't evaluate field Error in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:44:20: template: search.html:109:5: executing "search.html" at <.ErrorMessage>: can't evaluate field ErrorMessage in type []service.search
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:46:44: template: search.html:109: unexpected "(" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-01 21:47:35: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:47:43: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:47:45: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:50:06: template: search.html:114: unexpected "<" in command
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-01 21:50:20: template: search.html:111: missing value for command
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-01 21:50:35: template: search.html:121: unexpected EOF
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-01 21:51:12: template: search.html:109: unexpected "(" in operand
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-01 21:51:39: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:51:52: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-01 21:52:01: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-02 10:57:20: template: search.html:109:9: executing "search.html" at <len .>: error calling len: reflect: call of reflect.Value.Type on zero Value
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 25
+
+
+2023-06-02 10:57:48: template: search.html:122: unexpected EOF
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-02 10:58:02: template: search.html:121: unexpected EOF
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-02 10:59:45: template: search.html:122: unexpected EOF
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-02 11:08:29: template: search.html:116: expected end; found {{else}}
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-02 11:08:52: template: search.html:117: unexpected {{else}}
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-02 11:09:11: template: search.html:118: unexpected {{end}}
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-02 11:15:20: ОШИБКА: неверный синтаксис для типа integer: "{.}" (SQLSTATE 22P02)
+File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
+Line: 15
+

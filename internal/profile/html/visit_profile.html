@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Profile {{.LocalId}}</title>
+  <title>Profile</title>
   <style>
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 60vh;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #fff;
     }
 
     form {
       width: 400px;
       padding: 20px;
-      background-color: #f0f0f0;
+      background-color: rgba(255, 255, 255, 0.8);
       border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .home-button-container {
       position: absolute;
       top: 10px;
       right: 10px;
-      background-color: blue;
-      padding: 10px;
-      border-radius: 5px;
     }
 
     .home-button {
       color: white;
       text-decoration: none;
+      background-color: blue;
+      padding: 10px;
+      border-radius: 5px;
     }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="number"],
+    select,
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .message {
+      margin-top: 10px;
+      color: #555;
+    }
+
   </style>
 </head>
 <body>
@@ -38,7 +87,7 @@
   <a class="home-button" href="/home/{{.LocalId}}">Home</a>
 </div>
 <h1>User Profile</h1>
-<form method="post" action="/home/user">
+<form id="profileForm">
   <table>
     <tr>
       <td>Email:</td>
@@ -63,7 +112,7 @@
     <tr>
       <td>Gender:</td>
       <td>
-        <select name="gender" disabled class="disabled-select">
+        <select name="gender" disabled>
           <option value="male" {{if eq .Gender "male"}}selected{{end}}>Male</option>
           <option value="female" {{if eq .Gender "female"}}selected{{end}}>Female</option>
         </select>
@@ -76,4 +125,4 @@
   </table>
 </form>
 </body>
-</html>
+</html>l>

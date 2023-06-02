@@ -8,28 +8,87 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 60vh;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      background: linear-gradient(to bottom right, #333333, #808080);
+      color: #ffffff;
+    }
+
+    h1 {
+      margin-top: 0;
     }
 
     form {
       width: 400px;
       padding: 20px;
-      background-color: #f0f0f0;
+      background-color: rgba(72, 70, 70, 0.8);
       border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(24, 24, 24, 0.1);
     }
 
     .home-button-container {
       position: absolute;
       top: 10px;
       right: 10px;
-      background-color: blue;
-      padding: 10px;
-      border-radius: 5px;
     }
 
     .home-button {
       color: white;
       text-decoration: none;
+      background-color: #808080;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="number"],
+    select,
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .message {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
     }
   </style>
 </head>
@@ -38,32 +97,32 @@
   <a class="home-button" href="/home">Home</a>
 </div>
 <h1>User Profile</h1>
-<form method="post" action="/home/profile">
+<form id="profileForm">
   <table>
     <tr>
       <td>Email:</td>
-      <td><input type="email" name="email" value="{{.Email}}"></td>
+      <td><input type="email" name="email" value="{{.Email}}" readonly></td>
     </tr>
     <tr>
       <td>Login:</td>
-      <td><input type="text" name="login" value="{{.Login}}"></td>
+      <td><input type="text" name="login" value="{{.Login}}" readonly></td>
     </tr>
     <tr>
       <td>Age:</td>
-      <td><input type="number" name="age" value="{{.Age}}"></td>
+      <td><input type="number" name="age" value="{{.Age}}" readonly></td>
     </tr>
     <tr>
       <td>Firstname:</td>
-      <td><input type="text" name="firstName" value="{{.FirstName}}"></td>
+      <td><input type="text" name="firstName" value="{{.FirstName}}" readonly></td>
     </tr>
     <tr>
       <td>Lastname:</td>
-      <td><input type="text" name="lastName" value="{{.LastName}}"></td>
+      <td><input type="text" name="lastName" value="{{.LastName}}" readonly></td>
     </tr>
     <tr>
       <td>Gender:</td>
       <td>
-        <select name="gender" >
+        <select name="gender" {{if not .EditMode}}disabled{{end}}>
           <option value="male" {{if eq .Gender "male"}}selected{{end}}>Male</option>
           <option value="female" {{if eq .Gender "female"}}selected{{end}}>Female</option>
         </select>
@@ -71,22 +130,71 @@
     </tr>
     <tr>
       <td>Date Of Birth:</td>
-      <td><input type="date" name="date_of_birth" value="{{.DateOfBirth}}"></td>
+      <td><input type="date" name="date_of_birth" value="{{.DateOfBirth}}" readonly></td>
     </tr>
   </table>
   <button type="button" onclick="toggleEditMode()">Edit</button>
-  <input type="submit" name="save" value="Save">
+  <button type="button" onclick="saveProfile()" disabled>Save</button>
+  <div class="message" id="message"></div>
 </form>
 <script>
+  var editMode = false;
+
   function toggleEditMode() {
     var inputs = document.getElementsByTagName("input");
     var selects = document.getElementsByTagName("select");
+    var editButton = document.querySelector("button[type='button'][onclick='toggleEditMode()']");
+    var saveButton = document.querySelector("button[type='button'][onclick='saveProfile()']");
+
+    editMode = !editMode;
+
     for (var i = 0; i < inputs.length; i++) {
-      inputs[i].disabled = !inputs[i].disabled;
+      inputs[i].readOnly = !editMode;
     }
     for (var i = 0; i < selects.length; i++) {
-      selects[i].disabled = !selects[i].disabled;
+      selects[i].disabled = !editMode;
     }
+
+    if (editMode) {
+      editButton.innerText = "Cancel";
+      saveButton.disabled = false;
+    } else {
+      editButton.innerText = "Edit";
+      saveButton.disabled = true;
+      showMessage("");
+    }
+  }
+
+  function saveProfile() {
+    var form = document.getElementById("profileForm");
+    var formData = new FormData(form);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("PUT", "/home/profile", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          showMessage("Profile saved successfully.", "success");
+        } else {
+          showMessage("An error occurred while saving the profile.", "error");
+        }
+      }
+    };
+
+    var encodedData = "";
+    for (var pair of formData.entries()) {
+      encodedData += encodeURIComponent(pair[0]) + "=" + encodeURIComponent(pair[1]) + "&";
+    }
+    encodedData = encodedData.slice(0, -1);
+
+    xhr.send(encodedData);
+  }
+
+  function showMessage(message, messageType) {
+    var messageElement = document.getElementById("message");
+    messageElement.innerText = message;
+    messageElement.className = messageType;
   }
 </script>
 </body>

@@ -10,7 +10,9 @@
       left: 20px;
       font-size: 24px;
       color: #ffffff;
+      animation: fade-in 1s ease-in-out;
     }
+
     /* Styles for the gray circle */
     .avatar {
       position: absolute;
@@ -21,6 +23,7 @@
       background-color: #808080;
       border-radius: 50%;
       cursor: pointer;
+      animation: scale-in 0.5s ease-in-out;
     }
 
     /* Styles for the text inside the gray circle */
@@ -31,6 +34,7 @@
       height: 100%;
       color: #ffffff;
       font-size: 18px;
+      transition: transform 0.3s ease-in-out;
     }
 
     /* Styles for the link to the /user page */
@@ -48,16 +52,17 @@
       position: absolute;
       top: 70px;
       left: 20px;
-      background-color: #f9f9f9;
+      background-color: #333333;
       width: 120px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
       display: none;
+      animation: slide-down 0.5s ease-in-out;
     }
 
     /* Styles for the elements in the dropdown menu */
     .dropdown a {
-      color: black;
+      color: white;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
@@ -65,21 +70,58 @@
 
     /* Styles for the elements in the dropdown menu when hovering over them */
     .dropdown a:hover {
-      background-color: #f1f1f1;
+      background-color: #666666;
     }
 
-    /* Styles for the "Additionally" button */
-    .additionally {
+    /* Styles for the "LinkUp" button */
+    .linkup {
       position: absolute;
       top: 20px;
       left: 20px;
-      font-size: 18px;
-      color: #180d0d;
+      font-size: 24px;
+      color: #ffffff;
+      animation: fade-in 1s ease-in-out;
       cursor: pointer;
+    }
+
+    /* Animation for fading in elements */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animation for scaling in elements */
+    @keyframes scale-in {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /* Animation for sliding down elements */
+    @keyframes slide-down {
+      from {
+        transform: translateY(-10px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    /* Gradient background styles */
+    body {
+      background: linear-gradient(to bottom right, #333333, #808080);
     }
   </style>
 </head>
 <body>
+
 <div class="header">LinkUp</div>
 <div class="avatar">
   <span><a href="/home/profile">+</a></span>
@@ -90,14 +132,24 @@
   <a href="/chats">Chats</a>
   <a href="/logout">Logout</a>
 </div>
-<div class="additionally">Additionally</div>
+<div class="linkup">
+  <a >LinkUp</a>
+</div>
 <script>
   // Get page elements
-  const additionallyButton = document.querySelector('.additionally');
+  const linkupButton = document.querySelector('.linkup a');
   const dropdownMenu = document.querySelector('.dropdown');
-  // Event handler for the "Additionally" button
-  additionallyButton.addEventListener('click', function() {
+  // Event handler for the "LinkUp" button
+  linkupButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the link from navigating
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Close the dropdown menu when clicking outside of it
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('.linkup a')) {
+      dropdownMenu.style.display = 'none';
+    }
   });
 </script>
 </body>

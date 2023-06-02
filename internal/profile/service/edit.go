@@ -1,7 +1,6 @@
 package service
 
 import (
-	cs "LinkUp_Update/constans"
 	mycookies "LinkUp_Update/internal/cookie"
 	"net/http"
 	"strconv"
@@ -20,7 +19,7 @@ func (s *Service) Edit() {
 		s.c.Status(http.StatusInternalServerError)
 		return
 	}
-	s.c.Redirect(http.StatusFound, cs.Profile)
+	s.c.Status(http.StatusOK)
 }
 
 func (s *Service) parseEditData() (editUserData, error) {

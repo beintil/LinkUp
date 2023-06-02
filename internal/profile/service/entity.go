@@ -22,6 +22,7 @@ type getUserData struct {
 	Age         int64     `json:"age,omitempty" db:"age"`
 	Gender      string    `json:"gender,omitempty" db:"gender"`
 	DateOfBirth string    `json:"date_of_birth" db:"date_of_birth"`
+	EditMode    bool
 	LocalId     string
 }
 

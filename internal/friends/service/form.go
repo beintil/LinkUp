@@ -14,7 +14,7 @@ type userData struct {
 func (s *Service) friendsFormHandler(usersData *[]users) {
 	var file string
 
-	if s.c.Request.URL.Path != cs.UrlWithoutId(cs.GetFriends, s.c.Request.URL.Path) {
+	if cs.UrlWithoutId(cs.GetFriends, s.c.Request.URL.Path) == cs.GetFriends {
 		file = "./internal/friends/html/friends.html"
 	} else {
 		file = "./internal/friends/html/friends_visited.html"

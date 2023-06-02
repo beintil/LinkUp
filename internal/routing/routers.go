@@ -26,13 +26,14 @@ func (r *routers) identification() {
 }
 
 func (r *routers) profile() {
-	r.eng.GET(cs.Profile, profile.Get).POST(cs.Profile, profile.Edit)
+	r.eng.GET(cs.Profile, profile.Get)
+	r.eng.PUT(cs.Profile, profile.Edit)
 }
 
 func (r *routers) friends() {
+	r.eng.DELETE(cs.DeleteFriend, friends.Delete)
+	r.eng.POST(cs.AddFriend, friends.Add)
 	r.eng.GET(cs.GetFriends, friends.Get)
-	r.eng.POST(cs.DeleteFriends, friends.Delete)
-	r.eng.POST(cs.AddFriends, friends.Add)
 }
 
 func (r *routers) search() {

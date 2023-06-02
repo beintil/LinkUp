@@ -9,12 +9,26 @@
       flex-direction: column;
       align-items: center;
       margin-top: 50px;
+      animation: fade-in 1s ease;
     }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .user-container {
       display: flex;
       align-items: center;
       margin: 10px;
+      animation: slide-up 0.5s ease;
     }
+
+    @keyframes slide-up {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
     .avatar {
       width: 50px;
       height: 50px;
@@ -24,17 +38,43 @@
       align-items: center;
       justify-content: center;
       margin-right: 20px;
+      transition: background-color 0.3s ease;
     }
+
+    .avatar:hover {
+      background-color: lightgray;
+    }
+
     .header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin: 20px;
     }
+
     .button-container {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .empty-message {
+      margin-top: 20px;
+      animation: fade-in 1s ease;
     }
   </style>
 </head>
@@ -55,18 +95,32 @@
       <div>First name: {{.FirstName}}</div>
       <div>Last name: {{.LastName}}</div>
       <div>Local ID: {{.LocalId}}</div>
+      <button onclick="deleteFriend('{{.LocalId}}')">Delete from Friends</button>
     </div>
   </div>
   {{end}}
   {{else}}
-  <div>Sorry, there are no friends to display.</div>
+  <div class="empty-message">Sorry, there are no friends to display.</div>
   {{end}}
-  <script>
-    function redirectToAuthPage() {
-      window.location.replace("/friends");
-    }
-  </script>
-
 </div>
+
+<script>
+  function deleteFriend(localId) {
+    if (confirm("Are you sure you want to delete this friend?")) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("DELETE", "/friend/delete?id=" + encodeURIComponent(localId), true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onload = function () {};
+      xhr.send();
+      reloadPageWithCacheBust();
+    }
+  }
+
+  function reloadPageWithCacheBust() {
+    var cacheBust = Math.random().toString(36).substring(7);
+    location.href = location.origin + location.pathname + "?cache=" + cacheBust;
+  }
+</script>
+
 </body>
 </html>

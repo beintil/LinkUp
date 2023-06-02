@@ -26,6 +26,10 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
         }
         .results-container {
             display: flex;
@@ -51,6 +55,7 @@
         .error-message {
             color: red;
             margin-top: 20px;
+            display: none;
         }
         .button-container {
             position: absolute;
@@ -58,6 +63,15 @@
             right: 20px;
         }
     </style>
+    <script>
+        function refreshPage() {
+            try {
+                location.reload();
+            } catch (error) {
+                console.error('An error occurred while refreshing the page:', error);
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="button-container">
@@ -65,13 +79,17 @@
 </div>
 
 <div class="search-container">
-    <form action="/search" method="POST">
+    <form action="/search" method="POST" onsubmit="return validateForm()">
         <label for="data">Search:</label>
         <input type="text" id="data" name="data">
         <button type="submit">Search</button>
     </form>
 </div>
+
 {{if .}}
+{{if eq (len .) 0}}
+<div class="error-message">No results found.</div>
+{{else}}
 <div class="results-container">
     {{range .}}
     <div class="user-container">
@@ -81,7 +99,7 @@
             <div>First name: {{.FirstName}}</div>
             <div>Last name: {{.LastName}}</div>
             <div>Local ID: {{.LocalId}}</div>
-            <form action="/friends/add" method="POST">
+            <form action="/friend/add" method="POST">
                 <input type="hidden" name="id" value="{{.LocalId}}">
                 <button type="submit" {{if .IsFriends}}disabled{{end}} style="{{if .IsFriends}}background-color: gray;{{end}}">
                     {{if .IsFriends}}
@@ -95,8 +113,28 @@
     </div>
     {{end}}
 </div>
+{{end}}
 {{else}}
 <div class="error-message">Sorry, an error occurred while searching for users.</div>
 {{end}}
+
+<script>
+    window.addEventListener('error', function(event) {
+        console.error('An error occurred in the webpage:', event.error);
+    });
+
+    function validateForm() {
+        var inputField = document.getElementById('data');
+        var errorMessage = document.querySelector('.error-message');
+
+        if (inputField.value.trim() === '') {
+            errorMessage.style.display = 'block';
+            return false;
+        }
+
+        errorMessage.style.display = 'none';
+        return true;
+    }
+</script>
 </body>
 </html>

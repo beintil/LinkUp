@@ -6,24 +6,31 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #333;
+            background-image: linear-gradient(to bottom, #555555, #333333);
             background-size: cover;
             background-repeat: no-repeat;
         }
         h1 {
             text-align: center;
-            margin-top: 350px;
+            margin-top: 100px;
+            font-size: 36px;
+            color: #ccc;
+            animation: fadeIn 1s ease;
         }
         form {
             max-width: 340px;
             margin: 0 auto;
-            background-color: #ffffff;
+            background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+            animation: slideUp 1s ease;
         }
         label, input {
             display: block;
             margin-bottom: 10px;
+            color: #333;
         }
         input[type="email"],
         input[type="text"],
@@ -36,15 +43,16 @@
         input[type="submit"] {
             width: 100%;
             padding: 10px;
-            background-color: #007bff;
+            background-color: #666;
             color: #fff;
             font-weight: bold;
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #555;
         }
         #result {
             text-align: center;
@@ -55,11 +63,46 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background-color: #007bff;
+            background-color: #464242;
             color: #fff;
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes waveAnimation {
+            0% {
+                background-color: #504c4c;
+            }
+            50% {
+                background-color: #4f4848;
+            }
+            100% {
+                background-color: #3f3c3c;
+            }
+        }
+
+        .wave-effect {
+            animation: waveAnimation 2s infinite;
         }
     </style>
 </head>
@@ -73,8 +116,7 @@
     <input type="text" id="login" name="login">
     <label for="password">Password:</label>
     <input type="password" id="password" name="password">
-    <input type="submit" value="Submit">
-
+    <input type="submit" value="Submit" class="wave-effect">
 </form>
 <div id="result"></div>
 <script>
@@ -102,6 +144,7 @@
         };
         xhr.send(JSON.stringify(data));
     });
+
     function redirectToAuthPage() {
         window.location.replace("/auth/");
     }

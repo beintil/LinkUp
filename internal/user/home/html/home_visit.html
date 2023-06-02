@@ -2,106 +2,153 @@
 <html>
 <head>
     <title>LinkUp {{.}}</title>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>LinkUp</title>
-        <style>
-            /* Styles for the "LinkUp" header */
-            .header {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                font-size: 24px;
-                color: #ffffff;
-            }
-            /* Styles for the gray circle */
-            .avatar {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
-                background-color: #808080;
-                border-radius: 50%;
-                cursor: pointer;
-            }
+    <style>
+        /* Styles for the "LinkUp" header */
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #ffffff;
+            animation: fade-in 1s ease-in-out;
+        }
 
-            /* Styles for the text inside the gray circle */
-            .avatar span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                color: #ffffff;
-                font-size: 18px;
-            }
+        /* Styles for the gray circle */
+        .avatar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #808080;
+            border-radius: 50%;
+            cursor: pointer;
+            animation: scale-in 0.5s ease-in-out;
+        }
 
-            /* Styles for the link to the /user page */
-            .avatar a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                text-decoration: none;
-                color: #ffffff;
-            }
+        /* Styles for the text inside the gray circle */
+        .avatar span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #ffffff;
+            font-size: 18px;
+            transition: transform 0.3s ease-in-out;
+        }
 
-            /* Styles for the dropdown menu */
-            .dropdown {
-                position: absolute;
-                top: 70px;
-                left: 20px;
-                background-color: #f9f9f9;
-                width: 120px;
-                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                z-index: 1;
-                display: none;
-            }
+        /* Styles for the link to the /user page */
+        .avatar a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
 
-            /* Styles for the elements in the dropdown menu */
-            .dropdown a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
+        /* Styles for the dropdown menu */
+        .dropdown {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            background-color: #333333;
+            width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            display: none;
+            animation: slide-down 0.5s ease-in-out;
+        }
 
-            /* Styles for the elements in the dropdown menu when hovering over them */
-            .dropdown a:hover {
-                background-color: #f1f1f1;
-            }
+        /* Styles for the elements in the dropdown menu */
+        .dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-            /* Styles for the "Additionally" button */
-            .additionally {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                font-size: 18px;
-                color: #180d0d;
-                cursor: pointer;
+        /* Styles for the elements in the dropdown menu when hovering over them */
+        .dropdown a:hover {
+            background-color: #666666;
+        }
+
+        /* Styles for the "LinkUp" button */
+        .linkup {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #ffffff;
+            animation: fade-in 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Animation for fading in elements */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
             }
-        </style>
-    </head>
-    <body>
-    <div class="header">LinkUp</div>
-    <div class="avatar">
-        <span><a href="/home/profile/{{.}}">+</a></span>
-    </div>
-    <div class="dropdown">
-        <a href="/search">Search</a>
-        <a href="/friends/{{.}}">Friends</a>
-        <a href="/home">My Home Page</a>
-    </div>
-    <div class="additionally">Additionally</div>
-    <script>
-        // Get page elements
-        const additionallyButton = document.querySelector('.additionally');
-        const dropdownMenu = document.querySelector('.dropdown');
-        // Event handler for the "Additionally" button
-        additionallyButton.addEventListener('click', function() {
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
-    </script>
-    </body>
-    </html>
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation for scaling in elements */
+        @keyframes scale-in {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Animation for sliding down elements */
+        @keyframes slide-down {
+            from {
+                transform: translateY(-10px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Gradient background styles */
+        body {
+            background: linear-gradient(to bottom right, #333333, #808080);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">LinkUp</div>
+<div class="avatar">
+    <span><a href="/home/profile/{{.}}">+</a></span>
+</div>
+<div class="dropdown">
+    <a href="/friends/{{.}}">Friends</a>
+    <a href="/home">My Home</a>
+</div>
+<div class="linkup">
+    <a >LinkUp</a>
+</div>
+<script>
+    // Get page elements
+    const linkupButton = document.querySelector('.linkup a');
+    const dropdownMenu = document.querySelector('.dropdown');
+    // Event handler for the "LinkUp" button
+    linkupButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the link from navigating
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close the dropdown menu when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.linkup a')) {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

@@ -11,8 +11,8 @@ const (
 	SearchUser       = "/search"
 	GetFriends       = "/friends"
 	GetFriendsWithId = "/friends/:id"
-	AddFriends       = "/friends/add"
-	DeleteFriends    = "/friends/delete"
+	AddFriend        = "/friend/add"
+	DeleteFriend     = "/friend/delete"
 	Chats            = "/chats"
 )
 

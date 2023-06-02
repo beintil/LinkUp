@@ -15,12 +15,13 @@ func (s *Service) Search() {
 		DataFormHandler(s.c, nil)
 		return
 	}
-	result, err := s.searchUser(getData(user), mycookies.DecodeIdFromCookie(s.c))
+	users, err := s.searchUser(getData(user), mycookies.DecodeIdFromCookie(s.c))
 	if err != nil {
 		DataFormHandler(s.c, nil)
 		return
 	}
-	DataFormHandler(s.c, &result)
+
+	DataFormHandler(s.c, &users)
 }
 
 func (s *Service) searchUser(user *search, id string) ([]search, error) {
