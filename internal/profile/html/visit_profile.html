@@ -11,19 +11,20 @@
       height: 100vh;
       font-family: Arial, sans-serif;
       background-size: cover;
+      background: linear-gradient(to bottom right, #333333, #808080);
+      color: #ffffff;
     }
 
     h1 {
       margin-top: 0;
-      color: #fff;
     }
 
     form {
       width: 400px;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(72, 70, 70, 0.8);
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(24, 24, 24, 0.1);
     }
 
     .home-button-container {
@@ -35,7 +36,7 @@
     .home-button {
       color: white;
       text-decoration: none;
-      background-color: blue;
+      background-color: #808080;
       padding: 10px;
       border-radius: 5px;
     }
@@ -58,6 +59,8 @@
       border-radius: 3px;
       border: 1px solid #ccc;
       box-sizing: border-box;
+      background-color: #333333;
+      color: #ffffff;
     }
 
     button {
@@ -80,6 +83,13 @@
       color: #555;
     }
 
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -112,7 +122,7 @@
     <tr>
       <td>Gender:</td>
       <td>
-        <select name="gender" disabled>
+        <select name="gender" {{if not .EditMode}}disabled{{end}}>
           <option value="male" {{if eq .Gender "male"}}selected{{end}}>Male</option>
           <option value="female" {{if eq .Gender "female"}}selected{{end}}>Female</option>
         </select>
@@ -123,6 +133,7 @@
       <td><input type="date" name="date_of_birth" value="{{.DateOfBirth}}" readonly></td>
     </tr>
   </table>
+  <div class="message" id="message"></div>
 </form>
 </body>
-</html>l>
+</html>
