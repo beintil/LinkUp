@@ -1,11 +1,18 @@
 package service
 
 import (
+	cs "LinkUp_Update/constans"
+	"LinkUp_Update/pkg/html"
 	"github.com/jmoiron/sqlx"
 	"strings"
 )
 
 func (s *Service) Get(sql string, id string) {
+	var fileName = "friends_visited.html"
+	if cs.UrlWithoutId(cs.GetFriends, s.c.Request.URL.Path) == cs.GetFriends {
+		fileName = "friends.html"
+	}
+
 	var myFriends []string
 	var err error
 
@@ -17,7 +24,7 @@ func (s *Service) Get(sql string, id string) {
 	}
 	if len(myFriends) > 0 {
 		if myFriends[0] == "{}" {
-			s.friendsFormHandler(nil)
+			html.HandlerWithEntity(s.c, fileName, nil)
 			return
 		}
 
@@ -32,10 +39,16 @@ func (s *Service) Get(sql string, id string) {
 			usersData[n].FirstName = v.FirstName.String
 			usersData[n].LastName = v.LastName.String
 		}
-		s.friendsFormHandler(&usersData)
+		html.HandlerWithEntity(s.c, fileName, struct {
+			UsersData []users
+			ID        string
+		}{
+			UsersData: usersData,
+			ID:        s.c.Param("id"),
+		})
 		return
 	}
-	s.friendsFormHandler(nil)
+	html.HandlerWithEntity(s.c, fileName, nil)
 }
 
 func (s *Service) getUserData(friends []string) ([]dataFromDb, error) {

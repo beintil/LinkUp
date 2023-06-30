@@ -6,8 +6,7 @@ import (
 )
 
 func Run() {
-	var s = &MyServer{}
 	r := gin.New()
 	routing.StartRouting(r)
-	s.StartServer(r)
+	StartServer(r)
 }

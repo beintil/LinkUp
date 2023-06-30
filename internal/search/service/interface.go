@@ -15,6 +15,8 @@ func GetService(db *sqlx.DB, c *gin.Context) *Service {
 }
 
 type searchUsers interface {
+	Search()
+	searchUser(user *search, id string) ([]search, error)
 }
 
 type Service struct {

@@ -28,7 +28,8 @@ type MyServer struct {
 	mx  *sync.RWMutex
 }
 
-func (s *MyServer) StartServer(r *gin.Engine) {
+func StartServer(r *gin.Engine) {
+	var s *MyServer
 	// Starting the server
 	serverErrCh := make(chan error, 1)
 	doneCh := make(chan bool, 1)

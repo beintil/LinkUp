@@ -2,6 +2,7 @@ package service
 
 import (
 	mycookies "LinkUp_Update/internal/cookie"
+	"LinkUp_Update/pkg/html"
 	"errors"
 	"net/http"
 	"strings"
@@ -12,16 +13,17 @@ func (s *Service) Search() {
 	user.Data = s.c.Request.FormValue("data")
 	err := validData(&user)
 	if err != nil {
-		DataFormHandler(s.c, nil)
+		html.HandlerWithEntity(s.c, "search.html", nil)
+
 		return
 	}
 	users, err := s.searchUser(getData(user), mycookies.DecodeIdFromCookie(s.c))
 	if err != nil {
-		DataFormHandler(s.c, nil)
+		html.HandlerWithEntity(s.c, "search.html", nil)
 		return
 	}
 
-	DataFormHandler(s.c, &users)
+	html.HandlerWithEntity(s.c, "search.html", &users)
 }
 
 func (s *Service) searchUser(user *search, id string) ([]search, error) {

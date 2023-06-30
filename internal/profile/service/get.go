@@ -2,6 +2,7 @@ package service
 
 import (
 	mycookies "LinkUp_Update/internal/cookie"
+	"LinkUp_Update/pkg/html"
 	"LinkUp_Update/var/logs"
 	"net/http"
 )
@@ -15,7 +16,7 @@ func (s *Service) Get() {
 		return
 	}
 
-	s.myDataFormHandler(&user)
+	html.HandlerWithEntity(s.c, "profile.html", &user)
 }
 
 func (s *Service) getUserFromDB(sql string, user *getUserData, id string) error {

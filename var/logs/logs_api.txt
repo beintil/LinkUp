@@ -753,3 +753,83 @@ Line: 13
 File: C:/Users/vadim/GolandProjects/LinkUp/internal/friends/service/get_friends.go
 Line: 15
 
+
+2023-06-18 21:39:47: error inserting user: ОШИБКА: столбец "login" в таблице "users" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/services/register.go
+Line: 46
+
+
+2023-06-18 21:40:32: error inserting user: ОШИБКА: столбец "email" в таблице "users" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/services/register.go
+Line: 46
+
+
+2023-06-18 21:41:10: error inserting user: ОШИБКА: столбец "id" в таблице "users" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/services/register.go
+Line: 46
+
+
+2023-06-30 19:47:31: ОШИБКА: столбец "gender" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/profile/service/get.go
+Line: 13
+
+
+2023-06-30 19:47:34: ОШИБКА: столбец "gender" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/profile/service/get.go
+Line: 13
+
+
+2023-06-30 19:47:37: ОШИБКА: столбец "gender" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/profile/service/get.go
+Line: 13
+
+
+2023-06-30 19:48:55: ОШИБКА: столбец "date_of_birth" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/profile/service/get.go
+Line: 13
+
+
+2023-06-30 19:55:22: open ./pkg/auth.html: The system cannot find the file specified.
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/services/form.go
+Line: 19
+
+
+2023-06-30 19:55:22: open ./pkg/auth.html: The system cannot find the file specified.
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/services/form.go
+Line: 19
+
+
+2023-06-30 20:12:12: open ./internal/search/html/search.html: The system cannot find the path specified.
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/search/service/form.go
+Line: 13
+
+
+2023-06-30 20:14:49: ОШИБКА: столбец "friends_id" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/search/service/search.go
+Line: 70
+
+
+2023-06-30 20:14:52: ОШИБКА: столбец "friends_id" не существует (SQLSTATE 42703)
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/search/service/search.go
+Line: 70
+
+
+2023-06-30 20:29:55: open ./pkg/html/friends_visited: The system cannot find the file specified.
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/pkg/html/handler.go
+Line: 12
+
+
+2023-06-30 20:30:02: open ./pkg/html/friends_visited: The system cannot find the file specified.
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/pkg/html/handler.go
+Line: 12
+
+
+2023-06-30 20:38:35: errr
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/auth.go
+Line: 25
+
+
+2023-06-30 20:39:04: errr
+File: C:/Users/User/GolandProjects/awesomeProject/LinkUp/internal/identification/auth.go
+Line: 25
+

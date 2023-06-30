@@ -3,6 +3,7 @@ package search
 import (
 	"LinkUp_Update/internal/database"
 	"LinkUp_Update/internal/search/service"
+	"LinkUp_Update/pkg/html"
 	"LinkUp_Update/var/logs"
 	"context"
 	"github.com/gin-gonic/gin"
@@ -12,7 +13,7 @@ import (
 
 func Search(c *gin.Context) {
 	if c.Request.Method == http.MethodGet {
-		service.DataFormHandler(c, nil)
+		html.HandlerWithEntity(c, "search.html", nil)
 		return
 	}
 

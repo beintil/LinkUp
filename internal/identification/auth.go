@@ -3,6 +3,7 @@ package identification
 import (
 	"LinkUp_Update/internal/database"
 	"LinkUp_Update/internal/identification/services"
+	"LinkUp_Update/pkg/html"
 	"LinkUp_Update/var/logs"
 	"context"
 	"github.com/gin-gonic/gin"
@@ -12,7 +13,7 @@ import (
 
 func Authorization(c *gin.Context) {
 	if c.Request.Method != http.MethodPost {
-		services.FormHandler(c)
+		html.HandlerNotEntity(c, "auth.html")
 		return
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)

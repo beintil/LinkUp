@@ -1,6 +1,7 @@
 package service
 
 import (
+	"LinkUp_Update/pkg/html"
 	"LinkUp_Update/var/logs"
 	"net/http"
 )
@@ -14,7 +15,7 @@ func (s *Service) GetVisit() {
 		return
 	}
 
-	s.visitedDataFormHandler(&user)
+	html.HandlerWithEntity(s.c, "visit_profile.html", &user)
 }
 
 func (s *Service) getVisitedUserFromDB(sql string, user *getUserData, id string) error {

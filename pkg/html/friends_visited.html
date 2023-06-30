@@ -80,7 +80,7 @@
 </head>
 <body>
 <div class="header-container">
-  <h1>Your Friends</h1>
+  <h1>Friends</h1>
   <div class="button-container">
     <a href="/home/{{.ID}}"><button>Home</button></a>
   </div>
@@ -95,7 +95,6 @@
       <div>First name: {{.FirstName}}</div>
       <div>Last name: {{.LastName}}</div>
       <div>Local ID: {{.LocalId}}</div>
-      <button onclick="deleteFriend('{{.LocalId}}')">Delete from Friends</button>
     </div>
   </div>
   {{end}}
@@ -104,23 +103,6 @@
   {{end}}
 </div>
 
-<script>
-  function deleteFriend(localId) {
-    if (confirm("Are you sure you want to delete this friend?")) {
-      var xhr = new XMLHttpRequest();
-      xhr.open("DELETE", "/friend/delete?id=" + encodeURIComponent(localId), true);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.onload = function () {};
-      xhr.send();
-      reloadPageWithCacheBust();
-    }
-  }
-
-  function reloadPageWithCacheBust() {
-    var cacheBust = Math.random().toString(36).substring(7);
-    location.href = location.origin + location.pathname + "?cache=" + cacheBust;
-  }
-</script>
 
 </body>
 </html>

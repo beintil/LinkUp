@@ -16,7 +16,7 @@ func Get(c *gin.Context, db *sqlx.DB, ctx context.Context) *Service {
 	}
 }
 
-type service interface {
+type identification interface {
 	Auth()
 	Register()
 	Logout()
